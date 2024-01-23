@@ -65,7 +65,6 @@ import openpyxl
 file_path = 'OnlineRetail.xlsx'
 import pandas as pd
 
-file_path = "path/to/your/folder/filename.xlsx"
 
 # Open the Excel file using ExcelWriter to release any locks
 with pd.ExcelWriter(file_path, engine="openpyxl") as writer:
