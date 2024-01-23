@@ -34,7 +34,7 @@ def load_data (path):
         path ='Online Retail.xlsx'
         extention =path.split('.')[-1]
     else :
-        extention =path.name.split('.')[-1]
+        extention =path.split('.')[-1]
     if extention == 'csv':
        data = pd. read_csv(path)
     elif extention in ("xls", "xlsx"):
