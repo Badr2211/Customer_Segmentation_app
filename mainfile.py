@@ -63,25 +63,18 @@ def load():
 import openpyxl
 
 file_path = 'OnlineRetail.xlsx'
-
-# Load the Excel workbook
-workbook = openpyxl.load_workbook(file_path)
-
-# Select the desired sheet (e.g., the first sheet)
-sheet = workbook.active
-
-# Get all data from the sheet
-data = sheet.values
-
-# Convert the data to a Pandas DataFrame
 import pandas as pd
-df = pd.DataFrame(data, columns=sheet[1])
 
-# Optionally, you can reindex, drop NaN values, etc.
-df = df.reindex(columns=customer_id).dropna(how='all', axis=1)
+file_path = "path/to/your/folder/filename.xlsx"
 
-# Close the workbook when done
-workbook.close()
+# Open the Excel file using ExcelWriter to release any locks
+with pd.ExcelWriter(file_path, engine="openpyxl") as writer:
+    # Do nothing, just open and close the file to release locks
+    pass
+
+# Now you can read the Excel file using pd.read_excel
+df = pd.read_excel(file_path, engine="openpyxl").reindex(columns=customer_id).dropna(how='all', axis=1)
+
 
 # remove israeal from data
 df['Country'] = df['Country'].replace({'Israel': 'Palestine'})
