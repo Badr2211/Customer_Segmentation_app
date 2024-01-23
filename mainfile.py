@@ -29,9 +29,33 @@ def corrplot():
 def uniq (df):
     df=pd.DataFrame([[i,df[i].unique(),df[i].dtype,len(df[i].unique())]for i in df.columns],columns=['feature','val','types','len']).set_index('feature')
     return df
+def load_data (path):
+    
+    if path ==None :
+        path ='WA_Fn-UseC_-Telco-Customer-Churn.csv'
+        extention =path.split('.')[-1]
+    else :
+        extention =path.name.split('.')[-1]
+    if extention == 'csv':
+       data = pd. read_csv(path)
+    elif extention in ("xls", "xlsx"):
+        data = pd. read_excel(path)
+    elif extention == 'json' :
+       data = json.load(path)
+    elif extention == 'txt' :
+       with open(file_path, 'r') as file:
+            data = file.read()
+    elif extention == 'db':
+        conn = sqlite3.connect(file_path)
+        query = "SELECT * FROM ;"
+        data = pd.read_sql(query, conn)
+        conn.close()
+    else:
+        raise ValueError("Unsupported file extension")
+    return data
 
 def load():
-    df = pd.read_excel('OnlineRetail.xlsx')
+    df = load_data('OnlineRetail.xlsx')
     return df
 
 """- Load the data"""
