@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 
 import warnings
 import seaborn as sns
@@ -60,7 +59,7 @@ def load():
 
 """- Load the data"""
 
-df = load_data()
+df = load_data(None)
 
 # remove israeal from data
 df['Country'] = df['Country'].replace({'Israel': 'Palestine'})
