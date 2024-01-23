@@ -42,3 +42,26 @@ The project is structured into several main components:
    pip install -r requirements.txt
 
    streamlit run app.py
+
+## Usage
+    - The Streamlit app allows users to interactively explore customer segmentation results.
+    - Analyze the clusters and their characteristics to understand customer behavior.
+    - Review the generated visualizations and insights.
+    
+## Features
+- Data Preprocessing: Load and preprocess data, handling outliers and feature engineering.
+- Customer Segmentation: Utilize clustering techniques to segment customers into distinct groups.
+- Principal Component Analysis (PCA): Reduce dimensionality for better visualization.
+- K-Means Clustering: Apply K-Means clustering to group customers.
+- Visualizations: Present insights through various visualizations.
+- Deployment: Deployed on Streamlit Cloud for easy access.
+## Results
+- Detailed insights into customer segmentation.
+- Visualizations including radar charts, correlation matrices, and cluster profiling.
+- Actionable recommendations for business enhancement based on each customer cluster.
+## Deployment
+- The application is deployed on Streamlit Cloud for easy access. Visit (https://customerseg.streamlit.app/)[link] to interact with the app and explore customer segmentation.
+
+##License
+This project is licensed under the MIT License.
+
