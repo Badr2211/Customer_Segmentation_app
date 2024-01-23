@@ -38,7 +38,7 @@ def load_data (path):
     if extention == 'csv':
        data = pd. read_csv(path)
     elif extention in ("xls", "xlsx"):
-        data = pd. read_excel(path)
+        data = pd. read_excel(path,engine='openpyxl')
     elif extention == 'json' :
        data = json.load(path)
     elif extention == 'txt' :
