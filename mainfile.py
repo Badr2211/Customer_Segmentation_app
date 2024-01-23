@@ -31,7 +31,7 @@ def uniq (df):
     return df
 
 def load():
-    df = pd.read_excel('OnlineRetail.xlsx',engine='openpyxl')
+    df = pd.read_excel('OnlineRetail.xlsx')
     return df
 
 """- Load the data"""
