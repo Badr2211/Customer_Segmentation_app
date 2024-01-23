@@ -31,7 +31,7 @@ def uniq (df):
 def load_data (path):
     
     if path ==None :
-        path ='OnlineRetail.xlsx'
+        path ='Online Retail.xlsx'
         extention =path.split('.')[-1]
     else :
         extention =path.name.split('.')[-1]
@@ -54,25 +54,12 @@ def load_data (path):
     return data
 
 def load():
-    df = load_data('OnlineRetail.xlsx')
+    df = load_data('Online Retail.xlsx')
     return df
 
 """- Load the data"""
 
-#df = load_data(None)
-import openpyxl
-
-file_path = 'OnlineRetail.xlsx'
-import pandas as pd
-
-
-# Open the Excel file using ExcelWriter to release any locks
-with pd.ExcelWriter(file_path, engine="openpyxl") as writer:
-    # Do nothing, just open and close the file to release locks
-    pass
-
-# Now you can read the Excel file using pd.read_excel
-df = pd.read_excel(file_path, engine="openpyxl").reindex(columns=customer_id).dropna(how='all', axis=1)
+#df = load()
 
 
 # remove israeal from data
