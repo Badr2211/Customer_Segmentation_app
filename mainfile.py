@@ -59,7 +59,7 @@ def load():
 
 """- Load the data"""
 
-#df = load()
+df = load()
 
 
 # remove israeal from data
