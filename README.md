@@ -1,9 +1,8 @@
 # Customer_Segmentation_app
 This project is an End to End Data Science The Target is to  Customer Segmentation customer segmentation based on their purchasing behavior in an e-commerce dataset. The goal is to identify distinct groups of customers with similar preferences and behaviors, enabling personalized marketing strategies and recommendations. 
 
-# Customer Segmentation and Analysis
-
-This project involves the analysis and segmentation of customer behavior using an Online Retail dataset. The main objectives are to preprocess the data, identify clusters of customers, and perform exploratory data analysis (EDA).
+## Deployment
+- The application is deployed on Streamlit Cloud for easy access. Visit [link](https://customerseg.streamlit.app/) to interact with the app and explore customer segmentation.
 
 ## Overview
 
@@ -59,9 +58,6 @@ The project is structured into several main components:
 - Detailed insights into customer segmentation.
 - Visualizations including radar charts, correlation matrices, and cluster profiling.
 - Actionable recommendations for business enhancement based on each customer cluster.
-## Deployment
-- The application is deployed on Streamlit Cloud for easy access. Visit (https://customerseg.streamlit.app/)[link] to interact with the app and explore customer segmentation.
-
-##License
+## License
 This project is licensed under the MIT License.
 
