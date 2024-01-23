@@ -27,17 +27,20 @@ with st.sidebar:
 
 if True:
     #metric
-    st.subheader('Metrics')
+
+    st.subheader('1-Metrics')
+    st.markdown('''***''')
     col1 ,col2,col3,col4 =st.columns([.5,.5,.5,.5])
     col1.metric('Total Purcahse $',mf.customer_behavior['Total_spending'].sum())
     col2.metric('Total Products Purchased',mf.customer_behavior['total_products_purchased'].sum())
     col3.metric('N.Transaction',mf.customer_behavior['N.transaction'].sum())
     col4.metric('N.Proudact',len(mf.customer_behavior['unique_products'].unique()))
+    st.markdown('''***''')
     
     #scatter
            
     fig, ax = plt.subplots()
-    st.subheader('Explore the data')
+    st.subheader('2-Explore the data')
     maincol1, maincol2 = st.columns([.5,.4]) 
     
     with maincol1:
@@ -115,7 +118,7 @@ This cluster comprises the highest total spending customers, and they exhibit th
     
     st.dataframe(mf.cluster_profiling)
     
-    st.header('Personalization and Recommendations')
+    st.header('3-Personalization and Recommendations')
     col1 ,col2,col3,col4 =st.columns([.5,.5,.5,.5])
     
     with col1:
