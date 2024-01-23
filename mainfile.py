@@ -32,10 +32,10 @@ def uniq (df):
 def load_data (path):
     
     if path ==None :
-        path ='WA_Fn-UseC_-Telco-Customer-Churn.csv'
+        path ='OnlineRetail.xlsx'
         extention =path.split('.')[-1]
     else :
-        extention =path.split('.')[-1]
+        extention =path.name.split('.')[-1]
     if extention == 'csv':
        data = pd. read_csv(path)
     elif extention in ("xls", "xlsx"):
@@ -60,7 +60,7 @@ def load():
 
 """- Load the data"""
 
-df = load()
+df = load_data()
 
 # remove israeal from data
 df['Country'] = df['Country'].replace({'Israel': 'Palestine'})
