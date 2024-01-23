@@ -59,7 +59,10 @@ def load():
 
 """- Load the data"""
 
-df = load_data(None)
+#df = load_data(None)
+import os
+file_path = os.path.abspath(OnlineRetail.xlsx')
+df = pd.read_excel(file_path, engine="openpyxl").reindex(columns=customer_id).dropna(how='all', axis=1)
 
 # remove israeal from data
 df['Country'] = df['Country'].replace({'Israel': 'Palestine'})
